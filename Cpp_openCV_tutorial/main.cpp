@@ -21,7 +21,7 @@ int main(int argc, char** argv)
 		std::cout << "无法读取到图像……";
 		return -1;
 	}
-	cv::imshow("输入图像", src);
+	cv::imshow("读取到输入图像", src);
 	cv::waitKey(0);
 
 	return 0;
