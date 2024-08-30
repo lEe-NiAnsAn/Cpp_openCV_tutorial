@@ -1,10 +1,11 @@
-//配置openCV:——>视图\属性管理器\_x64_opencv
+//配置openCV——>视图\属性管理器\_x64_opencv
 /*
-\VC++目录
+\VC++目录：
 1、配置包含目录：	D:\openCV\opencv\build\include\opencv2
 				D:\openCV\opencv\build\include
 2、配置库目录：	D:\openCV\opencv\build\x64\vc16\lib
-链接器\输出目录
+
+\链接器\输出目录：
 3、配置附加依赖项：	D:\openCV\opencv\build\x64\vc16\lib\opencv_world480%~%.lib
 					%~%lib：配置Release则为.lib；Debug为d.lib
 4、配置环境变量PATH：	D:\openCV\opencv\build\x64\vc16\bin
