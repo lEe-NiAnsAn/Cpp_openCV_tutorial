@@ -15,7 +15,7 @@
 
 int main00(int argc, char** argv)
 {
-	cv::Mat src = cv::imread("D:/user/Pictures/Saved Pictures/test.jpg");
+	cv::Mat src = cv::imread("test.jpg");
 	if (src.empty())
 	{
 		std::cout << "无法读取到图像……";
