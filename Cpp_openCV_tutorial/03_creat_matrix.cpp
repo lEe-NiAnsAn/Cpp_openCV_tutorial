@@ -24,7 +24,4 @@ int main(int argc, char** argv)
 	destroyAllWindows();
 
 	return 0;
-
-
-	return 0;
 }
