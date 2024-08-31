@@ -4,7 +4,7 @@
 using namespace std;
 using namespace cv;
 
-int main(int argc, char** argv)
+int main02(int argc, char** argv)
 {
 	Mat src = imread("test01.png");
 	if (src.empty())
