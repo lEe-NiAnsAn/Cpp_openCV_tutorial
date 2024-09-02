@@ -32,17 +32,16 @@ void Demo3::pixel_visit_demo(Mat& image)
 	{
 		uchar* current_row = image.ptr<uchar>(row);	//获取当前行指针
 		for (int col = 0; col < w; col++)
-		{
+		{	//循环列的长度
 			if (c == 1)
 			{
-				int pv = *current_row;
-				*current_row++ = 255 - pv;
+				*current_row++ = 255 - *current_row;	//解引用，从该列行首遍历至行尾
 			}
 			if (c == 3)
 			{
 				*current_row++ = 255 - *current_row;
 				*current_row++ = 255 - *current_row;
-				*current_row++ = 255 - *current_row;
+				*current_row++ = 255 - *current_row;	//解引用，从该列行首遍历三通道至行尾
 			}
 		}
 	}
