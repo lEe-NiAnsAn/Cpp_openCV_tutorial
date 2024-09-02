@@ -7,7 +7,7 @@ using namespace std;
 using namespace cv;
 #include "03_creat_matrix.h"
 
-int main(int argc, char** argv)
+int main3(int argc, char** argv)
 {
 	Mat src = imread("test01.png");
 	if (src.empty())

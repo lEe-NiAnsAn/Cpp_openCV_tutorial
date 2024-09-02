@@ -36,9 +36,18 @@
     <ClCompile Include="Demo2.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="04_pixel_visit.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo3.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="03_creat_matrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="04_pixel_visit.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
