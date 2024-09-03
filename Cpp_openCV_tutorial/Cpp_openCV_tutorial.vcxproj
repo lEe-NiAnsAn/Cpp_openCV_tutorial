@@ -195,11 +195,14 @@
     <ClCompile Include="Demo1.cpp" />
     <ClCompile Include="Demo2.cpp" />
     <ClCompile Include="Demo3.cpp" />
+    <ClCompile Include="Demo4.cpp" />
     <ClCompile Include="prepare.cpp" />
+    <ClCompile Include="05_arithmetic_operation.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="03_creat_matrix.h" />
     <ClInclude Include="04_pixel_visit.h" />
+    <ClInclude Include="05_arithmetic_operation.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
