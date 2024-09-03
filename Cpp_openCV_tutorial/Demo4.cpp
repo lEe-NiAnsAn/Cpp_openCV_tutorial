@@ -30,7 +30,7 @@ void Demo4::operators_demo(Mat& image)
 		uchar* row3 = image.ptr<uchar>(row);	
 		for (int col = 0; col < w; col++)
 		{
-			//saturate_cast<uchar>：确保不越界模板参数类型取值范围，对uchar为0~255
+			//saturate_cast<uchar>()：确保不越界模板参数类型取值范围，对uchar为0~255
 			*row1++ = saturate_cast<uchar>((*row2++) + (*row3++));
 			*row1++ = saturate_cast<uchar>((*row2++) + (*row3++));
 			*row1++ = saturate_cast<uchar>((*row2++) + (*row3++));
