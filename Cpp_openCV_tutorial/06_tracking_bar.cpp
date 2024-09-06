@@ -2,9 +2,9 @@
 #include <opencv2/opencv.hpp>
 using namespace std;
 using namespace cv;
-#include "05_arithmetic_operation.h"
+#include "06_tracking_bar.h"
 
-int main5(int argc, char** argv)
+int main(int argc, char** argv)
 {
 	Mat src = imread("OIP-C.jpg");
 	if (src.empty())
@@ -13,8 +13,8 @@ int main5(int argc, char** argv)
 		return -1;
 	}
 	imshow("ÏÔÊ¾Í¼Ïñ", src);
-	Demo4 d04;
-	d04.operators_demo(src);
+	Demo5 d05;
+	d05.tracking_bar_demo(src);
 	waitKey(0);
 	destroyAllWindows();
 

@@ -192,10 +192,12 @@
     <ClCompile Include="02_operation.h" />
     <ClCompile Include="03_creat_matrix.cpp" />
     <ClCompile Include="04_pixel_visit.cpp" />
+    <ClCompile Include="06_tracking_bar.cpp" />
     <ClCompile Include="Demo1.cpp" />
     <ClCompile Include="Demo2.cpp" />
     <ClCompile Include="Demo3.cpp" />
     <ClCompile Include="Demo4.cpp" />
+    <ClCompile Include="Demo5.cpp" />
     <ClCompile Include="prepare.cpp" />
     <ClCompile Include="05_arithmetic_operation.cpp" />
   </ItemGroup>
@@ -203,6 +205,7 @@
     <ClInclude Include="03_creat_matrix.h" />
     <ClInclude Include="04_pixel_visit.h" />
     <ClInclude Include="05_arithmetic_operation.h" />
+    <ClInclude Include="06_tracking_bar.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

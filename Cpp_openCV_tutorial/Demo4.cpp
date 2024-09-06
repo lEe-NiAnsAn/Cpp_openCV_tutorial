@@ -46,4 +46,5 @@ void Demo4::operators_demo(Mat& image)
 	//方法实现：比值
 	divide(image, mo, dst);
 	imshow("方法比值运算", dst);
+	//参数一：运算图像一；参数二：运算图像二；参数三：输出运算后图像
 }
