@@ -49,6 +49,9 @@ static void on_track_c(int contrast, void* userdata)
     {
         double p_c = (contrast - 50) / 50.0 + 1.0;
         addWeighted(image, p_c, mo, 0, 0, dst);
+        //权重融合
+        //参数一：源图一；参数二：源图一权重；参数三：源图二；参数四：源图二权重
+        //参数五：伽马值，整体数据增加；参数六：输出图像；(参数七：图像深度，默认)
     }
     else // 降低对比度
     {
@@ -80,8 +83,9 @@ void Demo5::tracking_bar_demo(Mat& image)
     int max_l = 100; // 设置最大亮度值
     on_track_l(now_l, &image); // 向操作函数传参
     createTrackbar("亮度", "调整", &now_l, max_l, on_track_l, &image);
-    // 创建滑块|参数一：滑块名；参数二：显示窗口；参数三：待更改值；参数四：最大值(最小值0)
-    // 参数五：操作函数——>固定参数
+    // 创建滑块
+    // 参数一：滑块名；参数二：显示窗口；参数三：待更改值；参数四：最大值(最小值0)
+    // 参数五：操作函数——>固定参数；参数六：传向回调函数*void参数
 
     // 调整对比度
     int now_c = 50; // 设置原对比度值
