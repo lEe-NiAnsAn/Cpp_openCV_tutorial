@@ -12,7 +12,6 @@ int main(int argc, char** argv)
 		cout << "无法读取到图像……";
 		return -1;
 	}
-	imshow("显示图像", src);
 	Demo5 d05;
 	d05.tracking_bar_demo(src);
 	waitKey(0);
