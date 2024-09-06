@@ -1,59 +1,57 @@
-#include "06_tracking_bar.h"
+ï»¿#include "06_tracking_bar.h"
 
-static void on_track_l(int light, void* userdata)	
-//ÆäÖĞ£º(void*)ÎªÈÎÒâ±äÁ¿Ö¸Õë
+static void on_track_l(int light, void* userdata)
 {
-	Mat dst, mo, image;
-	image = *((Mat*)userdata);
-	dst = Mat::zeros(image.size(), image.type());
-	mo = Mat::zeros(image.size(), image.type());
+    Mat dst, mo, image;
+    image = *((Mat*)userdata);
+    dst = Mat::zeros(image.size(), image.type());
+    mo = Mat::zeros(image.size(), image.type());
 
-	if(light > 50)	//±äÁÁ
-	{
-		mo = Scalar((light - 50) * 2, (light - 50) * 2, (light - 50) * 2);
-		add(image, mo, dst);
-		imshow("µ÷Õû", dst);
-	}
-	else	//±ä°µ
-	{
-		mo = Scalar((50 - light) * 2, (50 - light) * 2, (50 - light) * 2);
-		subtract(image, mo, dst);
-		imshow("µ÷Õû", dst);
-	}
+    if (light > 50) // å˜äº®
+    {
+        mo = Scalar((light - 50) * 2, (light - 50) * 2, (light - 50) * 2);
+        add(image, mo, dst);
+    }
+    else // å˜æš—
+    {
+        mo = Scalar((50 - light) * 2, (50 - light) * 2, (50 - light) * 2);
+        subtract(image, mo, dst);
+    }
+    imshow("è°ƒæ•´", dst);
 }
-static void on_track_c(int contrast, void* userdata)	
+
+static void on_track_c(int contrast, void* userdata)
 {
-	Mat dst, mo, image;
-	image = *((Mat*)userdata);
-	dst = Mat::zeros(image.size(), image.type());
-	mo = Mat::zeros(image.size(), image.type());
+    Mat dst, mo, image;
+    image = *((Mat*)userdata);
+    dst = Mat::zeros(image.size(), image.type());
+    mo = Mat::zeros(image.size(), image.type());
 
-	if(contrast >= 50)	//Ìá¸ß¶Ô±È¶È
-	{
-		double p_c = (contrast - 50) / 50.0  + 1.0;
-		addWeighted(image, p_c, mo, 0, 0, dst);
-		imshow("µ÷Õû", dst);
-	}
-	else	//½µµÍ¶Ô±È¶È
-	{
-		double n_c = 1.0 - (50 - contrast) / 50.0;
-		addWeighted(image, n_c, mo, 0.0, 0, dst);
-		imshow("µ÷Õû", dst);
-	}
+    if (contrast >= 50) // æé«˜å¯¹æ¯”åº¦
+    {
+        double p_c = (contrast - 50) / 50.0 + 1.0;
+        addWeighted(image, p_c, mo, 0, 0, dst);
+    }
+    else // é™ä½å¯¹æ¯”åº¦
+    {
+        double n_c = 1.0 - (50 - contrast) / 50.0;
+        addWeighted(image, n_c, mo, 0.0, 0, dst);
+    }
+    imshow("è°ƒæ•´", dst);
 }
+
 void Demo5::tracking_bar_demo(Mat& image)
 {
-	namedWindow("µ÷Õû", WINDOW_AUTOSIZE);
-	//µ÷ÕûÁÁ¶È
-	int now_l = 50;	//ÉèÖÃÔ­ÁÁ¶ÈÖµ
-	int max_l = 100;	//ÉèÖÃ×î´óÁÁ¶ÈÖµ
-	on_track_l(now_l, &image);	//Ïò²Ù×÷º¯Êı´«²Î
-	createTrackbar("ÁÁ¶È", "µ÷Õû", &now_l, max_l, on_track_l, (void*)(&image));
-	//´´½¨»¬¿é|²ÎÊıÒ»£º»¬¿éÃû£»²ÎÊı¶ş£ºÏÔÊ¾´°¿Ú£»²ÎÊıÈı£º´ı¸ü¸ÄÖµ£»²ÎÊıËÄ£º×î´óÖµ(×îĞ¡Öµ0)
-	//²ÎÊıÎå£º²Ù×÷º¯Êı¡ª¡ª>¹Ì¶¨²ÎÊı
+    namedWindow("è°ƒæ•´", WINDOW_AUTOSIZE);
+    // è°ƒæ•´äº®åº¦
+    int now_l = 50; // è®¾ç½®åŸäº®åº¦å€¼
+    int max_l = 100; // è®¾ç½®æœ€å¤§äº®åº¦å€¼
+    on_track_l(now_l, &image); // å‘æ“ä½œå‡½æ•°ä¼ å‚
+    createTrackbar("äº®åº¦", "è°ƒæ•´", &now_l, max_l, on_track_l, &image);
+    // åˆ›å»ºæ»‘å—|å‚æ•°ä¸€ï¼šæ»‘å—åï¼›å‚æ•°äºŒï¼šæ˜¾ç¤ºçª—å£ï¼›å‚æ•°ä¸‰ï¼šå¾…æ›´æ”¹å€¼ï¼›å‚æ•°å››ï¼šæœ€å¤§å€¼(æœ€å°å€¼0)
+    // å‚æ•°äº”ï¼šæ“ä½œå‡½æ•°â€”â€”>å›ºå®šå‚æ•°
 
-	//µ÷Õû¶Ô±È¶È
-	on_track_l(now_l, &image);
-	createTrackbar("¶Ô±È¶È", "µ÷Õû", &now_l, max_l, on_track_c, (void*)(&image));
-
+    // è°ƒæ•´å¯¹æ¯”åº¦
+    on_track_c(now_l, &image);
+    createTrackbar("å¯¹æ¯”åº¦", "è°ƒæ•´", &now_l, max_l, on_track_c, &image);
 }
