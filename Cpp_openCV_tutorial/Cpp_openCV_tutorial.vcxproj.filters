@@ -60,6 +60,12 @@
     <ClCompile Include="Demo6.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="08_color_style.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo7.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="03_creat_matrix.h">
@@ -75,6 +81,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="07_key_operation.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="08_color_style.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

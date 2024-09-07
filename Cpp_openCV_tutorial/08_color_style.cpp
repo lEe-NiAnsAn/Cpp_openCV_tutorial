@@ -2,9 +2,9 @@
 #include <opencv2/opencv.hpp>
 using namespace std;
 using namespace cv;
-#include "07_key_operation.h"
+#include "08_color_style.h"
 
-int main7(int argc, char** argv)
+int main(int argc, char** argv)
 {
 	Mat src = imread("OIP-C.jpg");
 	if (src.empty())
@@ -12,8 +12,8 @@ int main7(int argc, char** argv)
 		cout << "无法读取到图像……";
 		return -1;
 	}
-	Demo6 d06;
-	d06.key_demo(src);
+	Demo7 d07;
+	d07.color_style_demo(src);
 	waitKey(0);
 	destroyAllWindows();
 
