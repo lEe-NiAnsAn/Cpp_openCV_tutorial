@@ -2,18 +2,19 @@
 #include <opencv2/opencv.hpp>
 using namespace std;
 using namespace cv;
-#include "10_channels_operation.h"
+#include "11_inrange_operation.h"
 
-int main10(int argc, char** argv)
+int main(int argc, char** argv)
 {
-	Mat src = imread("OIP-C.jpg");
+	Mat src = imread("greenback.png");
 	if (src.empty())
 	{
 		cout << "无法读取到图像……";
 		return -1;
 	}
-	Demo9 d09;
-	d09.channels_demo(src);
+	imshow("原图像", src);
+	Demo10 d10;
+	d10.inrange_demo(src);
 	waitKey(0);
 	destroyAllWindows();
 

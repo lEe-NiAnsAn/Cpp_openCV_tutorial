@@ -78,6 +78,12 @@
     <ClCompile Include="Demo9.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="11_inrange_operation.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo10.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="03_creat_matrix.h">
@@ -102,6 +108,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="10_channels_operation.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="11_inrange_operation.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
