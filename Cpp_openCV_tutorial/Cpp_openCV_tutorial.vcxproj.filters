@@ -15,12 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="prepare.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="01_read&amp;show.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="02_operation.h">
       <Filter>头文件</Filter>
     </ClCompile>
@@ -66,6 +60,18 @@
     <ClCompile Include="Demo7.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="01_read&amp;show.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="00_prepare.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="09_logic_operation.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo8.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="03_creat_matrix.h">
@@ -84,6 +90,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="08_color_style.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="09_logic_operation.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

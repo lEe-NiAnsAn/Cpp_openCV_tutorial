@@ -4,7 +4,7 @@ using namespace std;
 using namespace cv;
 #include "07_key_operation.h"
 
-int main7(int argc, char** argv)
+int main07(int argc, char** argv)
 {
 	Mat src = imread("OIP-C.jpg");
 	if (src.empty())

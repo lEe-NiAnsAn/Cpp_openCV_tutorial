@@ -4,7 +4,7 @@ using namespace std;
 using namespace cv;
 #include "06_tracking_bar.h"
 
-int main6(int argc, char** argv)
+int main06(int argc, char** argv)
 {
 	Mat src = imread("OIP-C.jpg");
 	if (src.empty())

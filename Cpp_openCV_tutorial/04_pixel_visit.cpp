@@ -4,7 +4,7 @@ using namespace std;
 using namespace cv;
 #include "04_pixel_visit.h"
 
-int main4(int argc, char** argv)
+int main04(int argc, char** argv)
 {
 	Mat src = imread("test01.png");
 	if (src.empty())

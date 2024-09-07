@@ -4,7 +4,7 @@ using namespace std;
 using namespace cv;
 #include "08_color_style.h"
 
-int main(int argc, char** argv)
+int main08(int argc, char** argv)
 {
 	Mat src = imread("OIP-C.jpg");
 	if (src.empty())

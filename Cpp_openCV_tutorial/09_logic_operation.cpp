@@ -2,9 +2,9 @@
 #include <opencv2/opencv.hpp>
 using namespace std;
 using namespace cv;
-#include "05_arithmetic_operation.h"
+#include "09_logic_operation.h"
 
-int main05(int argc, char** argv)
+int main(int argc, char** argv)
 {
 	Mat src = imread("OIP-C.jpg");
 	if (src.empty())
@@ -12,11 +12,11 @@ int main05(int argc, char** argv)
 		cout << "无法读取到图像……";
 		return -1;
 	}
-	imshow("显示图像", src);
-	Demo4 d04;
-	d04.operators_demo(src);
+	Demo8 d08;
+	d08.bitwise_demo(src);
 	waitKey(0);
 	destroyAllWindows();
 
 	return 0;
+
 }
