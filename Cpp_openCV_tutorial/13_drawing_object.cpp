@@ -2,9 +2,9 @@
 #include <opencv2/opencv.hpp>
 using namespace std;
 using namespace cv;
-#include "12_pixel_statistics.h"
+#include "13_drawing_object.h"
 
-int main12(int argc, char** argv)
+int main(int argc, char** argv)
 {
 	Mat src = imread("OIP-C.jpg");
 	if (src.empty())
@@ -12,9 +12,8 @@ int main12(int argc, char** argv)
 		cout << "无法读取到图像……";
 		return -1;
 	}
-	imshow("统计图像", src);
-	Demo11 d11;
-	d11.pixel_statistics_demo(src);
+	Demo12 d12;
+	d12.drawing_demo(src);
 	waitKey(0);
 	destroyAllWindows();
 

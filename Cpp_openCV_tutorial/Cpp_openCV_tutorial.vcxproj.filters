@@ -90,6 +90,15 @@
     <ClCompile Include="Demo11.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="13_drawing_object.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo12.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hexagon.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="03_creat_matrix.h">
@@ -120,6 +129,12 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="12_pixel_statistics.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="13_drawing_object.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hexagon.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
