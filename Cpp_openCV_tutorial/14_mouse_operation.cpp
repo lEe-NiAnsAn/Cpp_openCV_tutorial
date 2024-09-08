@@ -2,9 +2,9 @@
 #include <opencv2/opencv.hpp>
 using namespace std;
 using namespace cv;
-#include "13_drawing_object.h"
+#include "14_mouse_operation.h"
 
-int main13(int argc, char** argv)
+int main(int argc, char** argv)
 {
 	Mat src = imread("OIP-C.jpg");
 	if (src.empty())
@@ -12,8 +12,8 @@ int main13(int argc, char** argv)
 		cout << "无法读取到图像……";
 		return -1;
 	}
-	Demo12 d12;
-	d12.drawing_demo(src);
+	Demo13 d13;
+	d13.mouse_drawing_demo(src);
 	waitKey(0);
 	destroyAllWindows();
 

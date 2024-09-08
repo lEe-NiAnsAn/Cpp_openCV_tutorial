@@ -99,6 +99,12 @@
     <ClCompile Include="hexagon.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="14_mouse_operation.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo13.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="03_creat_matrix.h">
@@ -135,6 +141,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="hexagon.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="14_mouse_operation.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
