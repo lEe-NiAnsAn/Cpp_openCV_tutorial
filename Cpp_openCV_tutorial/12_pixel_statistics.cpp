@@ -12,6 +12,7 @@ int main(int argc, char** argv)
 		cout << "无法读取到图像……";
 		return -1;
 	}
+	imshow("统计图像", src);
 	Demo11 d11;
 	d11.pixel_statistics_demo(src);
 	waitKey(0);
