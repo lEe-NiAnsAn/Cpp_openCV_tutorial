@@ -15,6 +15,7 @@ void Demo11::pixel_statistics_demo(Mat& image)
 			  << ") \t最大位坐标：(" << maxLoc.x << "," << maxLoc.y << ")\n\n";
 	}
 	Scalar mean, studdev;
+	//(统计图像,平均值矩阵,标准方差矩阵)
 	meanStdDev(image, mean, studdev);
 	for (int i = 0; i < image.channels(); i++)
 	{
