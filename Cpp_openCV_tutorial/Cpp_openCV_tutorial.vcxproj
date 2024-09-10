@@ -234,7 +234,7 @@
     </ClCompile>
     <ClCompile Include="Demo8.cpp" />
     <ClCompile Include="Demo9.cpp" />
-    <ClCompile Include="hexagon.cpp" />
+    <ClCompile Include="Ngon.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="03_creat_matrix.h">
@@ -259,7 +259,7 @@
     <ClInclude Include="12_pixel_statistics.h" />
     <ClInclude Include="13_drawing_object.h" />
     <ClInclude Include="14_mouse_operation.h" />
-    <ClInclude Include="hexagon.h" />
+    <ClInclude Include="Ngon.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

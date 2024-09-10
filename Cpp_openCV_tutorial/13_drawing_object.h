@@ -1,6 +1,6 @@
 #pragma once
 #include <opencv2/opencv.hpp>
-#include "hexagon.h"
+#include "Ngon.h"
 using namespace cv;
 
 class Demo12

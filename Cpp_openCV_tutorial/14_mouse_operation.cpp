@@ -4,7 +4,7 @@ using namespace std;
 using namespace cv;
 #include "14_mouse_operation.h"
 
-int main(int argc, char** argv)
+int main14(int argc, char** argv)
 {
 	Mat src = imread("OIP-C.jpg");
 	if (src.empty())

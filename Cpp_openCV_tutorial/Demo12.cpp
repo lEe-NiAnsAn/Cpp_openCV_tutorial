@@ -52,7 +52,7 @@ void Demo12::drawing_demo(Mat& image)
 	}
 
 	Mat bg2 = Mat::zeros(Size(512, 512), CV_8UC3);
-	Hexagon hg(200, Point(250, 250));	//通过自建正六边形类创建对象
+	Ngon hg(12, 100, Point(256, 256),90.0);	//通过自建正多边形类创建对象
 	//(目标图像,顶点容器,填充颜色,抗锯齿类型,缩放参数)——>仅可填充
 	fillPoly(bg2, hg.m_v, Scalar(240, 190, 145), 8, 0);
 	//(目标图像,顶点容器,是否相连,边框颜色,线宽,抗锯齿类型,缩放参数)——>仅可绘制边框
@@ -64,7 +64,7 @@ void Demo12::drawing_demo(Mat& image)
 	for (int i = 0; i < 3; i++)
 	{
 		int y = 120 + i * 150;
-		Hexagon hg(60, Point(250, y));
+		Ngon hg(5, 60, Point(250, y),90.0);
 		contous.push_back(hg.m_v);
 	}
 	//(目标图像,容器,绘制目标索引,颜色,线宽,抗锯齿类型)——>功能：可绘制边框，亦可填充
