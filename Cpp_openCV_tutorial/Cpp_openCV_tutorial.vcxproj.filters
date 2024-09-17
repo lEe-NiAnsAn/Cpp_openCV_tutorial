@@ -105,6 +105,54 @@
     <ClCompile Include="Ngon.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="15_conver&amp;norm.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="16_resize&amp;interp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="17_flip_operation.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="18_rotate_operation.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="19_view_video.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="20_video_save.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="21_histogram.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="22_histogram_2d.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo14.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo15.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo16.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo17.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo18.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo19.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo20.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo21.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="03_creat_matrix.h">
@@ -144,6 +192,30 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Ngon.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="15_conver&amp;norm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="16_resize&amp;interp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="17_flip_operation.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="18_rotate_operation.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="19_view_video.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="20_video_save.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="21_histogram.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="22_histogram_2d.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

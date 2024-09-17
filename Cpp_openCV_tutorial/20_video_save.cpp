@@ -3,7 +3,7 @@
 using namespace cv;
 #include "20_video_save.h"
 
-int main(int argc, char** argv)
+int main20(int argc, char** argv)
 {
 	Mat src = imread("OIP-C.jpg");
 	if (src.empty())

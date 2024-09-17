@@ -3,7 +3,7 @@
 using namespace cv;
 #include "17_flip_operation.h"
 
-int main(int argc, char** argv)
+int main17(int argc, char** argv)
 {
 	Mat src = imread("OIP-C.jpg");
 	if (src.empty())

@@ -3,7 +3,7 @@
 using namespace cv;
 #include "15_conver&norm.h"
 
-int main(int argc, char** argv)
+int main15(int argc, char** argv)
 {
 	Mat src = imread("OIP-C.jpg");
 	if (src.empty())

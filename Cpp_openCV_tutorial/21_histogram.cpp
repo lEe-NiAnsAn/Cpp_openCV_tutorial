@@ -3,7 +3,7 @@
 using namespace cv;
 #include "21_histogram.h"
 
-int main(int argc, char** argv)
+int main21(int argc, char** argv)
 {
 	Mat src = imread("OIP-C.jpg");
 	if (src.empty())

@@ -3,7 +3,7 @@
 using namespace cv;
 #include "18_rotate_operation.h"
 
-int main(int argc, char** argv)
+int main18(int argc, char** argv)
 {
 	Mat src = imread("OIP-C.jpg");
 	if (src.empty())

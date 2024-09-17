@@ -14,7 +14,8 @@ void Demo21::histogram2d_demo(Mat& image)
 	calcHist(&hsv, 1, channels, Mat(), hs_hist, 2, hist_bins, hs_ranges);
 	double max_v = 0.0;
 	minMaxLoc(hs_hist, 0, &max_v, 0, 0);	//统计最大值
-	//参数一：统计图像；参数二：最小值存储处；参数三：最大值存储处；参数四：最小值坐标存储处；参数五：最大值坐标存储处；参数六：掩码(默认:空)
+	//参数一：统计图像；参数二：最小值存储处；参数三：最大值存储处；
+	//参数四：最小值坐标存储处；参数五：最大值坐标存储处；参数六：掩码(默认:空)
 	int scale = 3;
 	Mat hist2d = Mat::zeros(h_bins*scale, s_bins * scale, CV_8UC3);
 	for (int h = 0; h < h_bins; h++)
@@ -23,10 +24,12 @@ void Demo21::histogram2d_demo(Mat& image)
 		{
 			float bin_v = hs_hist.at<float>(h, s);
 			int intensity = cvRound(bin_v * 255 / max_v);	//通过最大值进行灰度归一化
-			rectangle(hist2d, Point(h * scale, s * scale), Point((h + 1) * scale - 1, (s + 1) * scale - 1), 
+			rectangle(hist2d, Point(h * scale, s * scale), 
+				Point((h + 1) * scale - 1, (s + 1) * scale - 1), 
 				Scalar::all(intensity), -1);
 			//Scalar::all(int)<=>Scalar(int,int,int)
-			//以步长(即总长除以总小区间数)绘制一个个直方图中的“像素”达到可视化，intensity即为“像素”的灰度
+			//以步长(即总长除以总小区间数)绘制一个个直方图中的“像素”达到可视化
+			//intensity即为“像素”的灰度
 		}
 	}
 	namedWindow("HSV色彩", WINDOW_AUTOSIZE);

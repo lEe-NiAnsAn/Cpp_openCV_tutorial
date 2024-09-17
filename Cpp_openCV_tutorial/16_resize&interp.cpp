@@ -3,7 +3,7 @@
 using namespace cv;
 #include "16_resize&interp.h"
 
-int main(int argc, char** argv)
+int main16(int argc, char** argv)
 {
 	Mat src = imread("OIP-C.jpg");
 	if (src.empty())

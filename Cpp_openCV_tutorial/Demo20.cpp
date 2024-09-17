@@ -12,8 +12,8 @@ void Demo20::histogram_demo(Mat& image)
 	const float* ranges[1] = { hranges };
 	Mat b_hist, g_hist, r_hist;
 	//计算BGR各通道数据
-	//参数一：统计图像指针；参数二：图像数量；参数三：需要统计的通道；参数四：掩码；参数五：统计输出图像；
-	//参数六：直方图维度；参数七：统计区间总个数的指针；参数八：统计像素值区间的指针；
+	//参数一：统计图像指针；参数二：图像数量；参数三：需要统计的通道；参数四：掩码；
+	//参数五：统计图像；参数六：直方图维度；参数七：统计区间总个数；参数八：统计像素值区间；
 	//参数九：是否归一化处理(默认:true)；参数十：多图像统计时是否累计计算(默认:false)
 	//输出图像：为一张1*256大小的灰度图像，每一个像素点的灰度值即为统计得出的灰度值
 	calcHist(&bgr_plane[0], 1, channels, Mat(), b_hist, 1, bins, ranges);
@@ -32,11 +32,14 @@ void Demo20::histogram_demo(Mat& image)
 	for (int i = 1; i < bins[0]; i++)
 	{
 		line(histImage, Point(bin_w * (i - 1), hist_h - cvRound(b_hist.at<float>(i - 1))),
-			Point(bin_w * (i), hist_h - cvRound(b_hist.at<float>(i))), Scalar(255, 0, 0), 1, 8, 0);
+			Point(bin_w * (i), hist_h - cvRound(b_hist.at<float>(i))), Scalar(255, 0, 0),
+			1, 8, 0);
 		line(histImage, Point(bin_w * (i - 1), hist_h - cvRound(g_hist.at<float>(i - 1))),
-			Point(bin_w * (i), hist_h - cvRound(g_hist.at<float>(i))), Scalar(0, 255, 0), 1, 8, 0);
+			Point(bin_w * (i), hist_h - cvRound(g_hist.at<float>(i))), Scalar(0, 255, 0),
+			1, 8, 0);
 		line(histImage, Point(bin_w * (i - 1), hist_h - cvRound(r_hist.at<float>(i - 1))),
-			Point(bin_w * (i), hist_h - cvRound(r_hist.at<float>(i))), Scalar(0, 0, 255), 1, 8, 0);
+			Point(bin_w * (i), hist_h - cvRound(r_hist.at<float>(i))), Scalar(0, 0, 255),
+			1, 8, 0);
 	}
 	//显示折线图
 	namedWindow("三通道色彩", WINDOW_AUTOSIZE);

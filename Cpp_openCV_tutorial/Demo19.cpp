@@ -7,9 +7,13 @@ void Demo19::videos_demo(Mat& image)
 	double frame_h = capture.get(CAP_PROP_FRAME_HEIGHT);	//视频高
 	double frame_c = capture.get(CAP_PROP_FRAME_COUNT);	//视频帧总数
 	double fps = capture.get(CAP_PROP_FPS);	//视频帧率
-	std::cout  << "视频帧总数：" << frame_c << "  分辨率：" << frame_w << "*" << frame_h << "  视频帧率：" << fps << std::endl;
-	VideoWriter writer("反色.mp4", capture.get(CAP_PROP_FOURCC),fps,Size(frame_w/2,frame_h/2),true);	//创建保存类对象
-	//参数一：保存文件名；参数二：保存编码格式；参数三：保存帧率；参数四：保存分辨率大小；参数五：是否为彩色
+	std::cout  << "视频帧总数：" << frame_c 
+		<< "  分辨率：" << frame_w << "*" << frame_h 
+		<< "  视频帧率：" << fps << std::endl;
+	VideoWriter writer("反色.mp4", capture.get(CAP_PROP_FOURCC),fps,
+		Size(frame_w/2,frame_h/2),true);	//创建保存类对象
+	//参数一：保存文件名；参数二：保存编码格式；参数三：保存帧率；
+	//参数四：保存分辨率大小；参数五：是否为彩色
 	Mat frame;
 	while (true)
 	{
