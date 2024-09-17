@@ -153,6 +153,12 @@
     <ClCompile Include="Demo21.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="23_histogram_equal.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo22.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="03_creat_matrix.h">
@@ -216,6 +222,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="22_histogram_2d.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="23_histogram_equal.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
