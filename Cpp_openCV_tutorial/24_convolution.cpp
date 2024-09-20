@@ -1,9 +1,9 @@
 #include <opencv2/opencv.hpp>
 #include <iostream>
 using namespace cv;
-#include "23_histogram_equal.h"
+#include "24_convolution.h"
 
-int main23(int argc, char** argv)
+int main(int argc, char** argv)
 {
 	Mat src = imread("OIP-C.jpg");
 	if (src.empty())
@@ -12,8 +12,8 @@ int main23(int argc, char** argv)
 		return -1;
 	}
 	imshow("¶ÁÈ¡Í¼Ïñ", src);
-	Demo22 d22;
-	d22.hist_eq_demo(src);
+	Demo23 d23;
+	d23.blur_demo(src);
 	waitKey(0);
 	destroyAllWindows();
 
